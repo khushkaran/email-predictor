@@ -25,6 +25,10 @@ class EmailGenerator
   end
 
   def first_initial_dot_last_initial
-    
+    email = @name.downcase.split(" ")
+    first_name = email[0]
+    last_name = email.last
+    email = "#{first_name[0]}.#{last_name[0]}"
+    email += "@#{@domain}"
   end
 end
