@@ -23,5 +23,11 @@ describe EmailGenerator do
       actual_pattern = @emailgen.first_initial_dot_last_name
       expect(actual_pattern).to eq expected_pattern
     end
+
+    specify "with the pattern first_initial_dot_last_initial" do
+      expected_pattern = "k.b@kesrinishaan.com"
+      actual_pattern = @emailgen.first_initial_dot_last_initial
+      expect(actual_pattern).to eq expected_pattern
+    end
   end
 end
