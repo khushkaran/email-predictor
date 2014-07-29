@@ -4,10 +4,10 @@ require "email_generator"
 describe EmailGenerator do
   context "can return an email" do
     before{
-      @emailgen = EmailGenerator.new
+      @emailgen = EmailGenerator.new("Khushkaran Bajwa", "kesrinishaan.com")
     }
     specify "with the pattern first_name_dot_last_name" do
-      actual_pattern = @emailgen.first_name_dot_last_name("Khushkaran Bajwa", "kesrinishaan.com")
+      actual_pattern = @emailgen.first_name_dot_last_name
       expected_pattern = "khushkaran.bajwa@kesrinishaan.com"
       expect(actual_pattern).to eq expected_pattern
     end
