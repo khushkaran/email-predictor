@@ -7,4 +7,8 @@ class EmailGenerator
     email = @name.downcase.split(" ").join(".")
     email += "@#{@domain}"
   end
+
+  def first_name_dot_last_initial
+    
+  end
 end
