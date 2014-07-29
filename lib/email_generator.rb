@@ -15,4 +15,8 @@ class EmailGenerator
     email = email.join(".")
     email += "@#{@domain}"
   end
+
+  def first_initial_dot_last_name
+    
+  end
 end
