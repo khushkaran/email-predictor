@@ -1,5 +1,6 @@
 class Predictor
   attr_reader :name
+  attr_reader :domain
 
   def initialize(name=nil, domain=nil)
     @name = name
