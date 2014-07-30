@@ -2,16 +2,31 @@ require "spec_helper"
 require "email_pattern_checker"
 
 describe EmailPatternChecker do
-  before{
-    @checker = EmailPatternChecker.new("John Ferguson", "john.ferguson@alphasights.com")
-  }
-
   it "can be initialised with an name and email string" do
-    expect(@checker.name).to eq "John Ferguson"
-    expect(@checker.email).to eq "john.ferguson@alphasights.com"
+    checker = EmailPatternChecker.new("John Ferguson", "john.ferguson@alphasights.com")
+    expect(checker.name).to eq "John Ferguson"
+    expect(checker.email).to eq "john.ferguson@alphasights.com"
   end
 
-  it "knows the patter of the initialised email string" do
-    expect(@checker.pattern).to eq "first_name_dot_last_name"
+  context 'knows the pattern of the initialised email string' do
+    it "for first_name_dot_last_name" do
+      checker = EmailPatternChecker.new("John Ferguson", "john.ferguson@alphasights.com")
+      expect(checker.pattern).to eq "first_name_dot_last_name"
+    end
+
+    it "for first_name_dot_last_initial" do
+      checker = EmailPatternChecker.new("John Ferguson", "john.f@alphasights.com")
+      expect(checker.pattern).to eq "first_name_dot_last_initial"
+    end
+
+    it "for first_initial_dot_last_name" do
+      checker = EmailPatternChecker.new("John Ferguson", "j.ferguson@alphasights.com")
+      expect(checker.pattern).to eq "first_initial_dot_last_name"
+    end
+
+    it "for first_initial_dot_last_initial" do
+      checker = EmailPatternChecker.new("John Ferguson", "j.f@alphasights.com")
+      expect(checker.pattern).to eq "first_initial_dot_last_initial"
+    end
   end
 end
