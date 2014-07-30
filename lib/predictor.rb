@@ -1,4 +1,8 @@
 class Predictor
+  def initialize(name, domain)
+    
+  end
+
   def dataset
     {
       "John Ferguson" => "john.ferguson@alphasights.com",
