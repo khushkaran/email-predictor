@@ -1,7 +1,7 @@
 class EmailPatternChecker
   attr_reader :email
 
-  def initialize(email)
+  def initialize(name, email)
     @email = email
   end
 
