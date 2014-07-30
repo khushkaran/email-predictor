@@ -25,4 +25,8 @@ class Predictor
     }
     matches
   end
+
+  def email_prediction
+    
+  end
 end

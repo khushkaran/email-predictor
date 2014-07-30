@@ -25,7 +25,7 @@ describe Predictor do
 
     it "can return the email with the correct pattern" do
       expected_email = "peter.wong@alphasights.com"
-      expect(@predictor.email).to eq expected_email
+      expect(@predictor.email_prediction).to eq expected_email
     end
   end
 end
