@@ -3,10 +3,11 @@ require "email_pattern_checker"
 
 describe EmailPatternChecker do
   before{
-    @checker = EmailPatternChecker.new("john.ferguson@alphasights.com")
+    @checker = EmailPatternChecker.new("John Ferguson", "john.ferguson@alphasights.com")
   }
 
-  it "can be initialised with an email string" do
+  it "can be initialised with an name and email string" do
+    expect(@checker.name).to eq "John Ferguson"
     expect(@checker.email).to eq "john.ferguson@alphasights.com"
   end
 
