@@ -27,6 +27,10 @@ class Predictor
   end
 
   def email_prediction
-    
+    pattern = matches.map{|match|
+      EmailPatternChecker.new(match[0], match[1]).pattern
+    }.uniq
+    email_gen = EmailGenerator.new(name,domain)
+    email_gen.send(pattern[0].to_sym)
   end
 end
