@@ -1,5 +1,5 @@
 class Predictor
-  def initialize(name, domain)
+  def initialize(name=nil, domain=nil)
     
   end
 
