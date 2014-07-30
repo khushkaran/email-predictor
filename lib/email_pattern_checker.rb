@@ -4,4 +4,8 @@ class EmailPatternChecker
   def initialize(email)
     @email = email
   end
+
+  def pattern
+    
+  end
 end
