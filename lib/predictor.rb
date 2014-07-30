@@ -19,6 +19,10 @@ class Predictor
   end
 
   def matches
-    
+    matches = Hash.new
+    dataset.each{|name, email|
+      matches[name] = email if email.to_domain == domain
+    }
+    matches
   end
 end
