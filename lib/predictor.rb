@@ -4,6 +4,7 @@ class Predictor
 
   def initialize(name=nil, domain=nil)
     @name = name
+    @domain = domain
   end
 
   def dataset
