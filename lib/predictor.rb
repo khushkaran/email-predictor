@@ -17,4 +17,8 @@ class Predictor
       "Steve Jobs" => "s.j@apple.com"
     }
   end
+
+  def matches
+    
+  end
 end
