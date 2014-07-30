@@ -22,5 +22,10 @@ describe Predictor do
       expected_matches = {"John Ferguson" => "john.ferguson@alphasights.com","Damon Aw" => "damon.aw@alphasights.com","Linda Li" => "linda.li@alphasights.com"}
       expect(@predictor.matches).to eq expected_matches
     end
+
+    it "can return the email with the correct pattern" do
+      expected_email = "peter.wong@alphasights.com"
+      expect(@predictor.email).to eq expected_email
+    end
   end
 end
