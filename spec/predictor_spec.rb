@@ -19,7 +19,6 @@ describe Predictor do
     end
 
     it "can get the record(s) for the it domain" do
-      predictor = Predictor.new("Peter Wong", "alphasights.com")
       expected_matches = {"John Ferguson" => "john.ferguson@alphasights.com","Damon Aw" => "damon.aw@alphasights.com","Linda Li" => "linda.li@alphasights.com"}
       expect(@predictor.matches).to eq expected_matches
     end
