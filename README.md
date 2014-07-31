@@ -82,7 +82,14 @@ the prediction to return.
 - Git(Hub)
 - Sinatra
 - Shotgun
+- Capybara
 
 ### The Instructions
 To run the application run `shotgun` and visit
-`localhost:9393` in the browser.
+`localhost:9393` in the browser. Or alternatively,
+visit http://email-predictor.herokuapp.com
+
+Fill in a name with the domain the user works for
+and click submti, the suggested email address will
+be displayed. If there is no suitable suggestion
+a notice will be displayed.
