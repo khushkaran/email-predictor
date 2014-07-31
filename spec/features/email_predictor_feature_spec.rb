@@ -14,6 +14,6 @@ describe "Web Interface" do
 
   it "can clear the current query" do
     click_button 'New Query'
-    expect(page).not_to have_content "craig.s@google.com"
+    expect(page).to have_css '.report' ,text: ""
   end
 end
