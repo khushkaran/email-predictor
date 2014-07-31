@@ -30,6 +30,7 @@ class Predictor
     pattern = matches.map{|match|
       EmailPatternChecker.new(match[0], match[1]).pattern
     }.uniq
+    return "Unable to make an accurate prediction" if pattern.count < 1
     email_gen = EmailGenerator.new(name,domain)
     email_gen.send(pattern[0].to_sym)
   end
