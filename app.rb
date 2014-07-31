@@ -19,3 +19,8 @@ post '/' do
   session[:report] = predictor.email_prediction
   redirect '/'
 end
+
+get '/newquery' do
+  session[:report] = nil
+  redirect '/'
+end
