@@ -28,4 +28,9 @@ describe Predictor do
       expect(@predictor.email_prediction).to eq expected_email
     end
   end
+
+  it "Returns an error if it cannot return a suitable prediction" do
+    predictor = Predictor.new("Barack Obama", "whitehouse.gov")
+    expect(predictor.email_prediction).to eq "Unable to make an accurate prediction"
+  end
 end
